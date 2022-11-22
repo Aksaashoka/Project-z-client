@@ -1,8 +1,13 @@
 import './App.css';
-import logo from './assets/logo512.png';
-import { Socketin } from './components/socketin';
+import { AppRouter } from './router/AppRouter';
+import { AuthProvider } from './context/AuthContext';
+
 function App() {
-  return <Socketin />;
+  return (
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
+  );
 }
 
 export default App;
